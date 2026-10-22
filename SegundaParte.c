@@ -113,12 +113,13 @@ int rotina_saudavel(){ // FUNÇÃO PARA CRIAR UMA ROTINA SAUDÁVEL PARA O USUÁR
 int calculadora_calorias(){ // FUNÇÃO QUE CALCULA A QUANTIDADE DE CALORIAS NO SEU PRATO
 	
 	int cal_100gramas, peso_no_prato, calorias_totais, i, soma_total, opcao;
-	
+
+	printf("-------------------------------------CALCULADORA DE CALORIAS----------------------------------------\n");
     i = 1;
     soma_total = 0;
     
     while (i == 1){
-    	printf("Digite a quantidade de calorias por 100 gramas do seu alimento: "); // PERMITEO O USUARIO CADASTRAR QUANTOS ALIMENTOS QUISER E RECEBER A SOMA COMPLETA NO FINAL
+    	printf("\nDigite a quantidade de calorias por 100 gramas do seu alimento: "); // PERMITEO O USUARIO CADASTRAR QUANTOS ALIMENTOS QUISER E RECEBER A SOMA COMPLETA NO FINAL
 		scanf("%d", &cal_100gramas);
 		printf("\nDigite o peso do determinado alimento em seu prato(gramas)");
 		scanf("%d", &peso_no_prato);
