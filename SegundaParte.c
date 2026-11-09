@@ -135,6 +135,61 @@ int calculadora_calorias(){ // FUNÇÃO QUE CALCULA A QUANTIDADE DE CALORIAS NO 
 	printf("A quantidade de calorias totais no seu prato e: %d", soma_total);
 }
 
+int atividade_fisica(){
+	
+	
+    float peso, altura, imc;
+    
+    printf("----------------------------------ATIVIDADE FÍSICA----------------------------------\n");
+    printf("\n *Vamos começar calculando seu IMC(Índice de Massa Corporal)*");
+ 
+    printf("\nDigite seu peso em kg(Ex: 80): ");
+    scanf("%f", &peso);
+
+    printf("\nDigite sua altura em metros(Ex: 1.80): ");
+    scanf("%f", &altura);
+
+    printf("Peso armazenado: %.2f\n", peso);
+    printf("Altura armazenada: %.2f\n", altura);
+
+    imc = peso / (altura * altura);
+
+    printf("Seu IMC e: %.2f\n", imc);
+	
+	    
+    if (imc < 18.5) {
+        printf("\n Seu IMC indica que você está abaixo do peso ideal.\n");
+        printf("ALTA INTENSIDADE!!!\n");
+    } else if (imc >= 18.5 && imc < 25) {
+        printf("\n Seu IMC indica que você está com peso normal.\n");
+        printf("ALTA INTENSIDADE!!!\n");
+    } else if (imc >= 25 && imc < 30) {
+        printf("\n Seu IMC indica que você está com sobrepeso.\n");
+        printf("MÉDIA INTENSIDADE!!!\n");
+    } else {
+        printf("\n Seu IMC indica que você está com obesidade.\n");
+        printf("BAIXA/MÉDIA INTENSIDADE!!!\n");
+	} 
+	
+	printf("------------------------------------------------CARDIO------------------------------------------------\n");
+	printf("1 - Corrida com aumento progressivo de quilometragem (EX: DIA 1 - 1Km,  DIA 2 - 1,5Km, DIA 3 - 2Km...)\n");
+	printf("2 - Bicicleta com aumento progressivo de quilometragem (EX: DIA 1 - 5Km, DIA 2 - 6Km, DIA 3 - 7Km...)\n ");
+	
+	printf("----------------------------------------------MUSCULAÇÃO-----------------------------------------------\n");
+	printf("Segunda-Feira - Treino de Costas, Biceps e Lateral de ombro \t \t");
+	printf("Terça-Feira - Treino de Peito, Triceps e Frontal de ombro \n");
+	printf("Quarta-Feira - Treino de Perna, panturrilha e Abdomêm \t \t");
+	printf("Quinta-Feira - Descanso \n");
+	printf("Sexta-Feira - Treino de superiores completo(Peito, Costas, Triceps, Biceps e Ombro. \n)");
+	
+	printf("-----------------------------------------------CALISTENIA----------------------------------------------\n");
+	printf("1 - Série de Abdominais (3 x 20) + Flexões(3 x 10)\n");
+	printf("2 - Série de Agachamentos(3 x 10) + Prancha(3 x 30s)\n");
+	
+
+	
+}
+
 int main(){ // FUNÇÃO MAIN
 
     int op;
@@ -153,5 +208,10 @@ int main(){ // FUNÇÃO MAIN
     else if (op == 2){
     	calculadora_calorias();
 	}
+	else if (op == 3){
+		atividade_fisica();
+	}
+	
+	
     return 0;
 }
