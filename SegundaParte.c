@@ -135,7 +135,7 @@ int calculadora_calorias(){ // FUNÇÃO QUE CALCULA A QUANTIDADE DE CALORIAS NO 
 	printf("A quantidade de calorias totais no seu prato e: %d", soma_total);
 }
 
-int atividade_fisica(){
+int atividade_fisica(){//FUNÇÃO PARA MOSTRAR UMA ATIVIDADE FÍSICA RECOMENDADA 
 	
 	
     float peso, altura, imc;
