@@ -143,10 +143,15 @@ void atualizarStatus(Acao acoes[], int totalAcoes) {
 
                 acoes[i].status = novoStatus;
                 
-                if (novoStatus == 2){
+                if (novoStatus == 2) {
+                    do {
+                        printf("Quantos participantes compareceram?");
+                        scanf("%d", &acoes[i].participantesReais);
 
-                    printf("Quantos participantes compareceram?");
-                    scanf("%d", &acoes[i].participantesReais);
+                        if (acoes[i].participantesReais < 0) {
+                            printf("Quantidade invalida! Digite um valor positivo.\n");
+                        }
+                    } while (acoes[i].participantesReais < 0);
                 }
 
                 printf("\nStatus atualizado com sucesso!\n"); // Atualiza o cadastro da ação com o novo status e volta ao menu principal
